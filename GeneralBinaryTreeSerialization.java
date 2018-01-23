@@ -9,7 +9,7 @@
  */
 public class Codec {
 
-    // Encodes a tree to a single string.
+    // Encodes a tree to a single string and returns that string.
     public String serialize(TreeNode root) {
         if (root == null) return "";
         StringBuilder sb = new StringBuilder();        
@@ -27,7 +27,7 @@ public class Codec {
         return;
     }
 
-    // Decodes your encoded data to tree.
+    // Decodes your encoded data to tree. Returns the root of the tree.
     public TreeNode deserialize(String data) {
         if (data.length() == 0) return null;
         String[] dataArr = data.split(",");
